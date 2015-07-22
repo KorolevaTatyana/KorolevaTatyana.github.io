@@ -23,9 +23,7 @@ output.innerHTML += window.localStorage["key3"];
 }
 }
 window.addEventListener("load", init, false);
-</script>
-</head>
-<body>
+
 <p>
 Значения в localStorage существуют не зависимо от закрытия вкладки или браузера
 </p>
@@ -38,11 +36,6 @@ window.addEventListener("load", init, false);
 <div id="output">
 
 
-</div>
-</body>
-</html>
-
- 
 window.addEventListener("load", function () {
 if (window.localStorage.pageColor) {
 document.body.style.backgroundColor = window.localStorage.pageColor;
