@@ -9,24 +9,19 @@ var context = canvas.getContext("2d");
 context.fillStyle = "blue";
 context.fillRect(100, 100, 50, 50);
 //// вычерчивание красной границы толщиной в 10 пикселей
-context.strokeStyle = "blue";
-context.lineWidth = 10;
-context.strokeRect(100, 100, 50, 50);
-//// очистка прямоугольной области от контента.
-}
 
-function draw1() {
+context.strokeRect(100, 100, 50, 50);
+
 var canvas2 = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 // заполнение прямоугольной области синим цветом.
 context.fillStyle = "yellow";
-context.fillRect(100, 100, 50, 50);
+context.fillRect(200, 100, 20, 30);
 //// вычерчивание красной границы толщиной в 10 пикселей
 
 
-context.strokeRect(100, 100, 50, 50);
-//// очистка прямоугольной области от контента.
-context.clearRect(125, 125, 50, 50);
+context.strokeRect(200, 100, 20, 30);
+
 }
 if (window.addEventListener)
 window.addEventListener("load", draw1, draw2, true);
