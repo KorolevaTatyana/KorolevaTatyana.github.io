@@ -22,6 +22,9 @@ $(document).ready(function(){
         $("div").stop(true, true);
     }); 
 });
+
+var x = document.getElementById("myOutput").form.id;
+
 </script> 
 </head>
 <body>
@@ -36,6 +39,13 @@ $(document).ready(function(){
 animation queue; so all animations on the element is stopped.</p>
 <p>The "Stop but finish" rushes through the current active animation, then it stops.</p> 
 
-<div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">"myOutput"</div>
+<form id="myForm" oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+  <input type="range" id="a" value="50">100
+  +<input type="number" id="b" value="50">
+  =<output id="myOutput" name="x" for="a b"></output>
+</form>
+
+
 </body>
 </html>
