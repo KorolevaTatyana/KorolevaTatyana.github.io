@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>JavaScript upload into HTML </title>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            document.getElementById("openButton").onclick = openButtonHandler;
+            document.getElementById("closeButton").onclick = closeButtonHandler;
+            var w;
+            function openButtonHandler() {
+                // первый параметр - html страница, которая будет загружена в новом окне.
+                // второй параметр - имя окна
+                // третий параметр - список дополнительных параметров (необязательный)
+               w = window.open( f (), "Window Name", "width=400,height=400,status=yes,resizable=no");
+			   
+			 function f (){
+    			 var a;
+
+				 if (document.getElementById("openButton").value = "Open Lesson3")
+			   {
+			   document.getElementById("openButton").onclick = "https://github.com/KorolevaTatyana/KorolevaTatyana.github.io/tree/master/Perspectiva/lesson3"
+			   }
+			   else if (document.getElementById("openButton").value = "Open Lesson7")
+			   {
+			   document.getElementById("openButton").onclick = "https://github.com/KorolevaTatyana/KorolevaTatyana.github.io/tree/master/Perspectiva/lesson7"
+			   }
+			   else
+			   {
+			   document.getElementById("openButton").onclick = "https://github.com/KorolevaTatyana/KorolevaTatyana.github.io/tree/master/Perspectiva/lesson12"
+			   }
+			   
+			   }
+
+			   w.window.onload = function ()
+			
+                {
+                    var p = w.document.getElementById("out");
+                    p.innerHTML = "New Window";
+                }
+            }
+            function closeButtonHandler()
+            {
+                w.close();
+            }
+            
+        }
+
+</script>
+    
+    <script type="text/javascript" src="script_file.js"></script>
+</head>
+<body>
+      
+
+	   <input type="button" id="openButton" value="Open Lesson3"   />
+       <input type="button" id="closeButton" value="Close Lesson3" />
+       <input type="button" id="openButton" value="Open Lesson7"   />
+       <input type="button" id="closeButton" value="Close Lesson7" />
+       <input type="button" id="openButton" value="Open Lesson12"   />
+       <input type="button" id="closeButton" value="Close Lesson12" />
+
+    <br />
+
+    <br />
+</body>
+</html>
