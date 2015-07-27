@@ -1,0 +1,51 @@
+html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>XMLHttpRequest ����������� ������</title>
+<script>
+window.onload = function () {
+
+
+
+s = document.getElementById("btnGet");
+s.onclick = function ()
+{
+var a
+var b
+var a1
+var b1
+a1 = document.getElementsByName("parameter a")[0].value;
+b1 = document.getElementsByName("parameter b")[0].value; 
+
+
+
+var xhr = new XMLHttpRequest(); // �������� ������� ��� HTTP �������.
+xhr.open("POST", "ajax.ashx"); // ��������� ������� ��� �������� ������������ GET �������
+       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.onreadystatechange = function () {
+if (xhr.readyState == a1 && xhr.status == b1) { // ���� ������� �����
+
+document.getElementById("output").innerHTML += xhr.responseText; // responseText - ����� ������ ����������� � �������.
+document.write ("</br> Server response: " + xhr.responseText + "<hr>")
+}
+
+}
+
+xhr.send("a = " + a1 + "&b =" +  b1); // 
+}
+}
+
+
+
+</script>
+</head>
+<body>
+
+ <form>
+post parameter a <input type="text" name="parameter a" style="width:20px" />
+post parameter b <input type="text" name="parameter b" style="width:20px" s />
+<input id="btnGet" type="button" value="Get Info" />
+
+</form> 
+<p id="output"></p>
+</body>
+</html>
